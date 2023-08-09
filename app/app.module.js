@@ -1,19 +1,24 @@
-import { __decorate } from "tslib";
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-export let AppModule = class AppModule {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppModule = void 0;
+const tslib_1 = require("tslib");
+const core_1 = require("@angular/core");
+const platform_browser_1 = require("@angular/platform-browser");
+const static_1 = require("@angular/upgrade/static");
+let AppModule = exports.AppModule = class AppModule {
     constructor(upgrade) {
         this.upgrade = upgrade;
     }
     ngDoBootstrap() {
         debugger;
-        this.upgrade.bootstrap(document.documentElement, ['phonecatApp']);
+        this.upgrade.bootstrap(document.body, ['phonecatApp']);
     }
 };
-AppModule = __decorate([
-    NgModule({
+exports.AppModule = AppModule = tslib_1.__decorate([
+    (0, core_1.NgModule)({
         imports: [
-            BrowserModule,
+            platform_browser_1.BrowserModule,
+            static_1.UpgradeModule
         ],
     })
 ], AppModule);

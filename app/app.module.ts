@@ -5,6 +5,7 @@ import { UpgradeModule } from '@angular/upgrade/static';
 @NgModule({
   imports: [
     BrowserModule,
+    UpgradeModule
   ],
 })
 export class AppModule implements DoBootstrap {
@@ -12,6 +13,6 @@ export class AppModule implements DoBootstrap {
     
     ngDoBootstrap() {
         debugger;
-        this.upgrade.bootstrap(document.documentElement, ['phonecatApp']);
+        this.upgrade.bootstrap(document.body, ['phonecatApp']);
     }
 }

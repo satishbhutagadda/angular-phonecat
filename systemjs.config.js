@@ -10,8 +10,8 @@
     },
     /* . . . */
     map: {
+      'ng-loader': '../src/systemjs-angular-loader.js',  
       // our app is within the app folder
-        'app': 'app',
         /* . . . */
         '@angular/core': 'npm:@angular/core/fesm2022/core.mjs',
         '@angular/common': 'npm:@angular/common/fesm2022/common.mjs',
@@ -22,26 +22,21 @@
         '@angular/router': 'npm:@angular/router/fesm2022/router.mjs',
         '@angular/router/upgrade': 'npm:@angular/router/fesm2022/upgrade.mjs',
         '@angular/forms': 'npm:@angular/forms/fesm2022/forms.mjs',
-        'rxjs': 'node_modules/rxjs',
-        'rxjs/operators': 'node_modules/rxjs/dist/mjs/operators',
-        'tslib': 'npm:tslib/tslib.js',
+        '@angular/upgrade/static': 'npm:@angular/upgrade/fesm2022/static.mjs',
         'plugin-babel': 'npm:systemjs-plugin-babel/plugin-babel.js',
         'systemjs-babel-build': 'npm:systemjs-plugin-babel/systemjs-babel-browser.js',
-        '@angular/upgrade/static': 'npm:@angular/upgrade/fesm2022/static.mjs',
+        'tslib': 'npm:tslib/tslib.js',
+        'rxjs': 'npm:rxjs/dist/cjs',
+        'rxjs/operators': 'npm:rxjs/dist/cjs/operators',
         /* . . . */
     },
     transpiler: 'plugin-babel',
     /* . . . */
     packages: {
         /* . . . */
-        // 'app': {
-        //   main: 'main',
-        //   defaultExtension: 'ts'
-        // },
-        // 'rxjs': {main: 'Rx'}
         app: {
-          main: 'main.js',
-          defaultExtension: 'ts',
+          main: 'main',
+          defaultExtension: 'js',
           meta: {
             './*.js': {
               loader: 'systemjs-angular-loader.js'
@@ -50,13 +45,13 @@
         },
         'rxjs': {
           defaultExtension: 'js',
-          format: 'mjs',
-          main: 'main.js'
+          format: 'cjs',
+          main: 'index.js'
         },
         'rxjs/operators': {
           defaultExtension: 'js',
-          format: 'mjs',
-          main: 'main.js'
+          format: 'cjs',
+          main: 'index.js'
         },
         'meta': {
             '*.mjs': {
