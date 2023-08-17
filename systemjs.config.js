@@ -10,8 +10,6 @@
     },
     /* . . . */
     map: {
-      'ng-loader': '../src/systemjs-angular-loader.js',  
-      // our app is within the app folder
         /* . . . */
         '@angular/core': 'npm:@angular/core/fesm2022/core.mjs',
         '@angular/common': 'npm:@angular/common/fesm2022/common.mjs',
@@ -36,7 +34,7 @@
         /* . . . */
         app: {
           main: 'main',
-          defaultExtension: 'js',
+          defaultExtension: 'ts',
           meta: {
             './*.js': {
               loader: 'systemjs-angular-loader.js'
